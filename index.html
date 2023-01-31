@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>布局</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box1 div {
+      min-height: 200px;
+    }
+
+    .box1 .left {
+      float: left;
+      width: 300px;
+      background: red;
+    }
+
+    .box1 .right {
+      float: right;
+      width: 300px;
+      background: #ccc;
+    }
+
+    .box1 .center {
+      background: pink;
+    }
+
+    /* 绝对定位 */
+    .box2 div {
+      position: absolute;
+      min-height: 200px;
+    }
+
+    .box2 .left {
+      left: 0;
+      width: 300px;
+      background: red;
+    }
+
+    .box2 .right {
+      right: 0;
+      width: 300px;
+      background: #ccc;
+    }
+
+    .box2 .center {
+      left: 300px;
+      right: 300px;
+      background: pink;
+    }
+
+    /* flex弹性布局----------------------------------------- */
+    .box3 {
+      display: flex;
+      min-height: 200px;
+    }
+
+    .box3 .left {
+      flex-basis: 300px;
+      background: red;
+    }
+
+    .box3 .right {
+      flex-basis: 300px;
+      background: #ccc;
+    }
+
+    .box3 .center {
+      flex: 1;
+      background: pink;
+    }
+
+    /* table-cell表格------------------------------------------- */
+    .box4 {
+      display: table;
+      width: 100%;
+      height: 200px;
+    }
+
+    .box4>div {
+      display: table-cell;
+    }
+
+    .box4 .left {
+      width: 300px;
+      background: red;
+    }
+
+    .box4 .right {
+      width: 300px;
+      background: #ccc;
+    }
+
+    .box4 .center {
+      background: pink;
+    }
+
+    /* grid网格------------------------------------------- */
+    .box5 {
+      display: grid;
+      width: 100%;
+      grid-template-rows: 200px;
+      grid-template-columns: 300px auto 300px;
+    }
+
+    .box5 .left {
+      background: red;
+    }
+
+    .box5 .right {
+      background: #ccc;
+    }
+
+    .box5 .center {
+      background: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>浮动布局</h2>
+  <div class="box1">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="center">浮动布局</div>
+  </div>
+  <!-- 绝对定位--------------------------------------------- -->
+  <h2>绝对定位</h2>
+  <div class="box2">
+    <div class="left"></div>
+    <div class="center">绝对定位布局</div>
+    <div class="right"></div>
+  </div>
+  <!-- flex弹性布局--------------------------------------------- -->
+  <h2 style="margin-top: 210px;">flex弹性布局</h2>
+  <div class="box3">
+    <div class="left"></div>
+    <div class="center">flex布局</div>
+    <div class="right"></div>
+  </div>
+  <!-- table-cell表格------------------------------------------------- -->
+  <h2>table-cell表格</h2>
+  <div class="box4">
+    <div class="left"></div>
+    <div class="center">表格布局</div>
+    <div class="right"></div>
+  </div>
+  <!-- grid网格------------------------------------------------- -->
+  <h2>grid网格</h2>
+  <div class="box5">
+    <div class="left"></div>
+    <div class="center">网格布局</div>
+    <div class="right"></div>
+  </div>
+</body>
+
+</html>
